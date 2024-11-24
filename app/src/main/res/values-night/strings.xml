@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" font="Work Sans">lets-Raw</string>
     <string name="book_title">This is the books title</string>
     <string name="this_is_the_books_author">This is the books author</string>
 </resources>

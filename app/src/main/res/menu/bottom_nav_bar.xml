@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/button_home"
+        android:title="home"
+        android:icon="@drawable/ic_account_home_button"/>
+    <item
+        android:id="@+id/button_create"
+        android:title="create"
+        android:icon="@drawable/ic_account_create_button"/>
+    <item
+        android:id="@+id/button_library"
+        android:title="library"
+        android:icon="@drawable/ic_account_library_button"/>
+    <item
+        android:id="@+id/button_account"
+        android:title="account"
+        android:icon="@drawable/ic_account_account_button"/>
+</menu>

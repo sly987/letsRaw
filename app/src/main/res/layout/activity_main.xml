@@ -8,15 +8,35 @@
     android:theme="@style/AppTheme"
     tools:context=".MainActivity">
 
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/fl_fragment"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:background="@color/md_theme_onTertiaryContainer"-->
+<!--        -->
+<!--        />-->
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fl_fragment"
+        android:layout_marginTop="30dp"/>
+
     <FrameLayout
         android:id="@+id/fl_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

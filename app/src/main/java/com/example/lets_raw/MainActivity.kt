@@ -1,6 +1,7 @@
 package com.example.lets_raw
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -38,6 +39,12 @@ class MainActivity : AppCompatActivity() {
 
             }
             true
+        }
+
+        val searchButton = findViewById<Button>(R.id.search_button)
+
+        searchButton.setOnClickListener {
+            onSearchRequested()
         }
     }
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Creation page fragment -->
     <TextView
         android:id="@+id/tv_second_fragment"
         android:layout_width="match_parent"

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".FourthFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Account page fragment -->
     <TextView
         android:id="@+id/tv_fourth_fragment"
         android:layout_width="match_parent"

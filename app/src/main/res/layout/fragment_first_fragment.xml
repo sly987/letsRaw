@@ -1,11 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Home page fragment -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".FirstFragment"
+    android:orientation="vertical"
+    android:layout_centerInParent="true">
 
-    <!-- TODO: Home page fragment -->
+    <SearchView
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar_background"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="15dp" />
+<!--    <Spinner-->
+<!--        android:id="@+id/filter_spinner"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:spinnerMode="dropdown" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_best_seller_card"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/best_seller_card_background"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/lv_best_seller_txt_card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_best_seller"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:text="@string/best_seller"
+                android:textStyle="bold"
+                android:fontFamily="@font/playwrite"
+                android:layout_weight="1">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/title"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/playwrite"
+                android:layout_weight="1">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/author"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/playwrite"
+                android:layout_weight="1">
+
+            </TextView>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_best_seller_img"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/lart_de_la_guerre"
+            android:layout_margin="10dp">
+        </ImageView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_book_discover"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="30dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_book_progress"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>
+

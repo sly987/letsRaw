@@ -17,15 +17,7 @@
 <!--        -->
 <!--        />-->
 
-    <Button
-        android:id="@+id/search_button"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/fl_fragment"
-        android:layout_marginTop="30dp"/>
+
 
     <FrameLayout
         android:id="@+id/fl_fragment"

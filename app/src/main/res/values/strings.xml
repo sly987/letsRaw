@@ -5,7 +5,7 @@
     <string name="title_activity_searchable">SearchableActivity</string>
     <string name="app_label">lets-raw</string>
     <string name="search_hint">search for books to read</string>
-    <string name="best_seller">BEST SELLER</string>
-    <string name="title">L\'art de la guerre</string>
-    <string name="author">Mouhamed Mountaga DIAO</string>
+    <string name="special_book_tag">BEST SELLER</string>
+    <string name="special_book_title">L\'ART DE LA GUERRE</string>
+    <string name="special_book_author">William Shakespeare</string>
 </resources>

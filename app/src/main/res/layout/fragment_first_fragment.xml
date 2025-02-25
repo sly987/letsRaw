@@ -3,11 +3,13 @@
 <!-- Home page fragment -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstFragment"
     android:orientation="vertical"
+    android:background="?attr/background"
     android:layout_centerInParent="true">
 
     <SearchView
@@ -15,92 +17,69 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/search_bar_background"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="15dp" />
-<!--    <Spinner-->
-<!--        android:id="@+id/filter_spinner"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:spinnerMode="dropdown" />-->
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="15dp" />
 
-    <LinearLayout
-        android:id="@+id/ll_best_seller_card"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/special_book_widget"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginVertical="30dp"
-        android:layout_marginHorizontal="40dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/best_seller_card_background"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:id="@+id/lv_best_seller_txt_card"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/tv_best_seller"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_margin="10dp"
-                android:text="@string/best_seller"
-                android:textStyle="bold"
-                android:fontFamily="@font/playwrite"
-                android:layout_weight="1">
+        android:layout_margin="10dp">
 
-            </TextView>
-            <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:text="@string/title"
-                android:layout_margin="10dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/playwrite"
-                android:layout_weight="1">
-
-            </TextView>
-            <TextView
-                android:id="@+id/tv_author"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:text="@string/author"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:layout_margin="10dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/playwrite"
-                android:layout_weight="1">
-
-            </TextView>
-
-        </LinearLayout>
-        <ImageView
-            android:id="@+id/iv_best_seller_img"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView2"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"
             android:src="@drawable/lart_de_la_guerre"
-            android:layout_margin="10dp">
-        </ImageView>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedCorners" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/book_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/tag_background"
+            android:fontFamily="@font/roboto_extra_bold"
+            android:text="@string/special_book_tag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_book_discover"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginBottom="30dp">
+        <TextView
+            android:id="@+id/book_title"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/roboto_extra_bold"
+            android:text="@string/special_book_title"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/book_tag" />
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/book_author"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:paddingHorizontal="5dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/special_book_author"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/book_title" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_book_progress"
-        android:layout_width="match_parent"
-        android:layout_height="150dp">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.recyclerview.widget.RecyclerView>
+
 
 
 </LinearLayout>

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">lets-Raw</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_searchable">SearchableActivity</string>
+    <string name="app_label">lets-raw</string>
+    <string name="search_hint">search for books to read</string>
+    <string name="special_book_tag">BEST SELLER</string>
+    <string name="special_book_title">L\'ART DE LA GUERRE</string>
+    <string name="special_book_author">William Shakespeare</string>
+    <string name="hp_book_item_title">L\'ART DE LA GUERRE</string>
 </resources>

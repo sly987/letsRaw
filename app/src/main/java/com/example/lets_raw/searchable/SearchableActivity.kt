@@ -1,4 +1,4 @@
-package com.example.lets_raw
+package com.example.lets_raw.searchable
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

@@ -4,4 +4,5 @@
     <color name="colorOnPrimary">#241111</color>
     <color name="colorSecondary">#DEC5C5</color>
     <color name="colorOnSecondary">#966262</color>
+    <color name="strokeColor">#FFFFFF</color>
 </resources>

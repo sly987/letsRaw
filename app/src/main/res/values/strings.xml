@@ -8,4 +8,5 @@
     <string name="special_book_tag">BEST SELLER</string>
     <string name="special_book_title">L\'ART DE LA GUERRE</string>
     <string name="special_book_author">William Shakespeare</string>
+    <string name="hp_book_item_title">L\'ART DE LA GUERRE</string>
 </resources>

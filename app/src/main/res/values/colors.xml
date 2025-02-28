@@ -7,4 +7,5 @@
     <color name="colorMainText">#F9F3F9</color>
     <color name="colorSecondaryText">#717171</color>
     <color name="strokeColor">#000000</color>
+    <color name="hpBackgroudColor1">#241111</color>
 </resources>

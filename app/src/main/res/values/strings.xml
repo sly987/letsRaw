@@ -9,4 +9,6 @@
     <string name="special_book_title">L\'ART DE LA GUERRE</string>
     <string name="special_book_author">William Shakespeare</string>
     <string name="hp_book_item_title">L\'ART DE LA GUERRE</string>
+    <string name="hp_continue_reading_title">L\'ART DE LA GUERRE</string>
+    <string name="hp_continue_reading_author">WILLIAM SHAKESPEAR</string>
 </resources>

@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name" font="Work Sans">lets-Raw</string>
-    <string name="book_title">This is the books title</string>
-    <string name="this_is_the_books_author">This is the books author</string>
+    <string name="app_name">lets-Raw</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_searchable">SearchableActivity</string>
+    <string name="app_label">lets-raw</string>
+    <string name="search_hint">search for books to read</string>
+    <string name="special_book_tag">BEST SELLER</string>
+    <string name="special_book_title">L\'ART DE LA GUERRE</string>
+    <string name="special_book_author">William Shakespeare</string>
+    <string name="hp_book_item_title">L\'ART DE LA GUERRE</string>
+    <string name="hp_continue_reading_title">L\'ART DE LA GUERRE</string>
+    <string name="hp_continue_reading_author">WILLIAM SHAKESPEAR</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="book_title">This is the books title</string>
-    <string name="this_is_the_books_author">This is the books author</string>
+    <string name="best_seller">BEST SELLER</string>
+    <string name="title">L\'art de la guerre</string>
+    <string name="author">Mouhamed Mountaga DIAO</string>
 </resources>

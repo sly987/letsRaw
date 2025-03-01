@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/hp_book_item_background"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/hp_book_item_cover"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/lart_de_la_guerre"
+        android:layout_gravity="center_horizontal"
+        app:shapeAppearanceOverlay="@style/RoundedCorners"
+        />
+
+    <TextView
+        android:id="@+id/hp_book_item_title"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:ellipsize="end"
+        android:text="@string/hp_book_item_title"
+        android:fontFamily="@font/roboto_extra_bold"
+        android:layout_gravity="center_horizontal"
+        android:textColor="?attr/colorOnPrimary"/>
+
+</LinearLayout>

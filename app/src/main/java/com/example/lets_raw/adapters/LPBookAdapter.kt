@@ -1,29 +1,28 @@
 package com.example.lets_raw.adapters
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lets_raw.R
 import com.example.lets_raw.models.HPBookItem
-import com.google.android.material.imageview.ShapeableImageView
 
-class HPContinueReadingAdapter(private val hpBookItemList: List<HPBookItem>) :
-    RecyclerView.Adapter<HPContinueReadingAdapter.HPBookItemViewHolder>() {
+class LPBookAdapter (private val hpBookItemList : List<HPBookItem>) : RecyclerView.Adapter<LPBookAdapter.HPBookItemViewHolder>() {
 
     class HPBookItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val titleTextView: TextView = view.findViewById(R.id.hp_continue_reading_title)
-        val authorTextView: TextView = view.findViewById(R.id.hp_continue_reading_author)
-        val coverImageView: ShapeableImageView = view.findViewById(R.id.hp_continue_reading_cover)
+        val titleTextView: TextView = view.findViewById(R.id.lp_book_title)
+        val authorTextView: TextView = view.findViewById(R.id.lp_book_author)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HPBookItemViewHolder {
-        val view = View.inflate(parent.context, R.layout.home_page_continue_reading_layout, null)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.lp_book_layout,parent,false)
         return HPBookItemViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return hpBookItemList.size
+        return this.hpBookItemList.size
     }
 
     override fun onBindViewHolder(holder: HPBookItemViewHolder, position: Int) {
@@ -31,8 +30,8 @@ class HPContinueReadingAdapter(private val hpBookItemList: List<HPBookItem>) :
         holder.titleTextView.text = hpBookItem.title
         holder.authorTextView.text = hpBookItem.author
 
-        val cardView = holder.itemView.findViewById<androidx.cardview.widget.CardView>(R.id.hp_continue_reading_progress_bar)
-        val parentView = holder.itemView.findViewById<ViewGroup>(R.id.hp_continue_reading_progress_bar_parent)
+        val cardView = holder.itemView.findViewById<CardView>(R.id.lp_book_progress_bar)
+        val parentView = holder.itemView.findViewById<ViewGroup>(R.id.lp_book_progress_bar_parent)
 
         parentView.viewTreeObserver.addOnPreDrawListener {
             val totalWidth = parentView.width
@@ -42,5 +41,4 @@ class HPContinueReadingAdapter(private val hpBookItemList: List<HPBookItem>) :
             true
         }
     }
-
 }

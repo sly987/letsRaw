@@ -11,4 +11,6 @@
     <string name="hp_book_item_title">L\'ART DE LA GUERRE</string>
     <string name="hp_continue_reading_title">L\'ART DE LA GUERRE</string>
     <string name="hp_continue_reading_author">WILLIAM SHAKESPEAR</string>
+    <string name="lp_book_title">Harry potter and the prison of Azkaban</string>
+    <string name="lp_book_author">J.K Rowling</string>
 </resources>

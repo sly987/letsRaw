@@ -14,3 +14,10 @@
 .cxx
 local.properties
 /.idea/*
+/.idea/.name
+/.idea/compiler.xml
+/.idea/gradle.xml
+/.idea/kotlinc.xml
+/.idea/material_theme_project_new.xml
+/.idea/migrations.xml
+/.idea/misc.xml

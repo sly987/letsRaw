@@ -37,7 +37,7 @@ class HPContinueReadingAdapter(private var bookItemList: List<BookItem>) :
         parentView.viewTreeObserver.addOnPreDrawListener {
             val totalWidth = parentView.width
             val layoutParams = cardView.layoutParams
-            layoutParams.width = (hpBookItem.pagesRead.toFloat() / hpBookItem.pages * totalWidth).toInt()
+            layoutParams.width = (hpBookItem.progress.toFloat() / hpBookItem.pages * totalWidth).toInt()
             cardView.layoutParams = layoutParams
             true
         }

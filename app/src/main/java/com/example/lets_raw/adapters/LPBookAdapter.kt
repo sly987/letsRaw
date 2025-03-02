@@ -7,9 +7,9 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lets_raw.R
-import com.example.lets_raw.models.HPBookItem
+import com.example.lets_raw.models.BookItem
 
-class LPBookAdapter (private val hpBookItemList : List<HPBookItem>) : RecyclerView.Adapter<LPBookAdapter.HPBookItemViewHolder>() {
+class LPBookAdapter (private var bookItems : List<BookItem>) : RecyclerView.Adapter<LPBookAdapter.HPBookItemViewHolder>() {
 
     class HPBookItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleTextView: TextView = view.findViewById(R.id.lp_book_title)
@@ -22,11 +22,11 @@ class LPBookAdapter (private val hpBookItemList : List<HPBookItem>) : RecyclerVi
     }
 
     override fun getItemCount(): Int {
-        return this.hpBookItemList.size
+        return this.bookItems.size
     }
 
     override fun onBindViewHolder(holder: HPBookItemViewHolder, position: Int) {
-        val hpBookItem = hpBookItemList[position]
+        val hpBookItem = bookItems[position]
         holder.titleTextView.text = hpBookItem.title
         holder.authorTextView.text = hpBookItem.author
 
@@ -36,9 +36,14 @@ class LPBookAdapter (private val hpBookItemList : List<HPBookItem>) : RecyclerVi
         parentView.viewTreeObserver.addOnPreDrawListener {
             val totalWidth = parentView.width
             val layoutParams = cardView.layoutParams
-            layoutParams.width = (hpBookItem.progress.toFloat() / hpBookItem.pages * totalWidth).toInt()
+            layoutParams.width = (hpBookItem.pagesRead.toFloat() / hpBookItem.pages * totalWidth).toInt()
             cardView.layoutParams = layoutParams
             true
         }
+    }
+
+    fun updateData(newBooks: List<BookItem>) {
+        bookItems = newBooks
+        notifyDataSetChanged()
     }
 }

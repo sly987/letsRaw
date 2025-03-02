@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.FourthFragment">
+    tools:context=".fragments.CreateFragment">
 
-    <!-- TODO: Account page fragment -->
+    <!-- TODO: Creation page fragment -->
     <TextView
-        android:id="@+id/tv_fourth_fragment"
+        android:id="@+id/tv_second_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="hello 4"
+        android:text="helllo 2"
         android:textAlignment="center"
         android:layout_marginTop="200dp"
         android:textSize="20sp"/>

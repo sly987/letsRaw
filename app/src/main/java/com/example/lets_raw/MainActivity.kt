@@ -6,10 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.lets_raw.fragments.FirstFragment
-import com.example.lets_raw.fragments.FourthFragment
-import com.example.lets_raw.fragments.SecondFragment
-import com.example.lets_raw.fragments.ThirdFragment
+import com.example.lets_raw.fragments.HomePageFragment
+import com.example.lets_raw.fragments.AccountCenterFragment
+import com.example.lets_raw.fragments.CreateFragment
+import com.example.lets_raw.fragments.LibraryFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val firstFragment= FirstFragment()
-        val secondFragment= SecondFragment()
-        val thirdFragment= ThirdFragment()
-        val fourthFragment= FourthFragment()
+        val homePageFragment= HomePageFragment()
+        val createFragment= CreateFragment()
+        val libraryFragment= LibraryFragment()
+        val accountCenterFragment= AccountCenterFragment()
         val bottomNavigationView=findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
 
@@ -32,13 +32,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        setCurrentFragment(firstFragment)
+        setCurrentFragment(homePageFragment)
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.button_home->setCurrentFragment(firstFragment)
-                R.id.button_create->setCurrentFragment(secondFragment)
-                R.id.button_library->setCurrentFragment(thirdFragment)
-                R.id.button_account->setCurrentFragment(fourthFragment)
+                R.id.button_home->setCurrentFragment(homePageFragment)
+                R.id.button_create->setCurrentFragment(createFragment)
+                R.id.button_library->setCurrentFragment(libraryFragment)
+                R.id.button_account->setCurrentFragment(accountCenterFragment)
 
             }
             true

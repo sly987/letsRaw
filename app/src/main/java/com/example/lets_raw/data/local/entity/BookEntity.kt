@@ -2,6 +2,7 @@ package com.example.lets_raw.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.lets_raw.models.types.Status
 
 @Entity(tableName = "books")
 data class BookEntity(
@@ -10,6 +11,7 @@ data class BookEntity(
     val author: String,
     val coverLink: String,
     val pages: Int,
-    val pagesRead: Int
+    val pagesRead: Int,
+    val status: String
 
 )

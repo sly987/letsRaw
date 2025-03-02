@@ -13,4 +13,10 @@
     <string name="hp_continue_reading_author">WILLIAM SHAKESPEAR</string>
     <string name="lp_book_title">Harry potter and the prison of Azkaban</string>
     <string name="lp_book_author">J.K Rowling</string>
+    <string name="cp_created_book_author">William shapespear</string>
+    <string name="cp_created_book_title">L\'ART DE LA GUERRE</string>
+    <string name="cp_created_book_nb_pages">100</string>
+    <string name="book_details_title">TITLE</string>
+    <string name="book_details_author">AUTHOR</string>
+    <string name="book_reader_content">This is where the book content will be displayed.</string>
 </resources>

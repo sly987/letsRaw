@@ -24,4 +24,8 @@ interface BookDao {
 
     @Query("SELECT * FROM books WHERE id = :bookId")
     fun getBookById(bookId: Int): LiveData<BookEntity>
+
+    @Query("SELECT * FROM books WHERE status = :status")
+    fun getBooksByStatus(status: String): LiveData<List<BookEntity>>
+
 }

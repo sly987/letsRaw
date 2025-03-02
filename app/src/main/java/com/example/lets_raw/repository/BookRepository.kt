@@ -17,6 +17,10 @@ class BookRepository(private val bookDao: BookDao) {
         return bookDao.getBookById(bookId)
     }
 
+    fun getBooksByStatus(status: String): LiveData<List<BookEntity>> {
+        return bookDao.getBooksByStatus(status)
+    }
+
 
     suspend fun addBook(book: BookEntity) {
         withContext(Dispatchers.IO) {

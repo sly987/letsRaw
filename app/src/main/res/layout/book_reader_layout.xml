@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/book_reader_fragment"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorOnPrimary"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/book_reader_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/book_reader_content"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/book_reader_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Back" />
+
+</LinearLayout>

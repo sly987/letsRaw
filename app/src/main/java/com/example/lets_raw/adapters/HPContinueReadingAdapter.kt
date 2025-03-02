@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lets_raw.R
-import com.example.lets_raw.models.HPBookItem
+import com.example.lets_raw.models.BookItem
 import com.google.android.material.imageview.ShapeableImageView
 
-class HPContinueReadingAdapter(private val hpBookItemList: List<HPBookItem>) :
+class HPContinueReadingAdapter(private var bookItemList: List<BookItem>) :
     RecyclerView.Adapter<HPContinueReadingAdapter.HPBookItemViewHolder>() {
 
     class HPBookItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -23,11 +23,11 @@ class HPContinueReadingAdapter(private val hpBookItemList: List<HPBookItem>) :
     }
 
     override fun getItemCount(): Int {
-        return hpBookItemList.size
+        return bookItemList.size
     }
 
     override fun onBindViewHolder(holder: HPBookItemViewHolder, position: Int) {
-        val hpBookItem = hpBookItemList[position]
+        val hpBookItem = bookItemList[position]
         holder.titleTextView.text = hpBookItem.title
         holder.authorTextView.text = hpBookItem.author
 
@@ -41,6 +41,11 @@ class HPContinueReadingAdapter(private val hpBookItemList: List<HPBookItem>) :
             cardView.layoutParams = layoutParams
             true
         }
+    }
+
+    fun updateData(newBooks: List<BookItem>) {
+        bookItemList = newBooks
+        notifyDataSetChanged()
     }
 
 }

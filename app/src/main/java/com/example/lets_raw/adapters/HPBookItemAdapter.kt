@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lets_raw.R
-import com.example.lets_raw.models.HPBookItem
+import com.example.lets_raw.models.BookItem
 import com.google.android.material.imageview.ShapeableImageView
 
-class HPBookItemAdapter(private val hpBookItemList: List<HPBookItem>) :
+class HPBookItemAdapter(private var bookItemList: List<BookItem>) :
     RecyclerView.Adapter<HPBookItemAdapter.HPBookItemViewHolder>() {
 
         class HPBookItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -22,11 +22,18 @@ class HPBookItemAdapter(private val hpBookItemList: List<HPBookItem>) :
     }
 
     override fun getItemCount(): Int {
-        return hpBookItemList.size
+        return bookItemList.size
     }
 
     override fun onBindViewHolder(holder: HPBookItemViewHolder, position: Int) {
-        val hpBookItem = hpBookItemList[position]
+        val hpBookItem = bookItemList[position]
         holder.titleTextView.text = hpBookItem.title
     }
+
+    fun updateData(newBooks: List<BookItem>) {
+        bookItemList = newBooks
+        notifyDataSetChanged()
+    }
+
+
 }
